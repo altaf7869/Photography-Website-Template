@@ -699,38 +699,55 @@
 			</div>
 			<!-- /SECTION 3 -->	
 
-			<!-- =========================== Pre-Wedding Video Section============================= -->
-<section class="py-5 bg-light" id="prewedding-video">
-    <div class="container">
-        <div class="row justify-content-center mb-4">
-            <div class="col-lg-8 text-center">
-                <h2 class="fw-bold mb-2">Pre-Wedding Shoot Video</h2>
-                <p class="text-muted">Here is a beautiful preview of our pre-wedding shoot. We create cinematic, emotional and premium quality pre-wedding films.</p>
-            </div>
-        </div>
+			<!-- =========================== Pre-Wedding Video Section START============================= -->
+				<section class="py-5 bg-light" id="prewedding-video">
+					<div class="container">
+						<div class="row justify-content-center mb-4">
+							<div class="col-lg-8 text-center">
+								<h2 class="fw-bold mb-2">Pre-Wedding Shoot Video</h2>
+								<p class="text-muted">Here is a beautiful preview of our pre-wedding shoot. We create cinematic, emotional and premium quality pre-wedding films.</p>
+							</div>
+						</div>
 
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="ratio ratio-4x3 shadow-lg rounded-3 overflow-hidden">
-                    <!-- Use YouTube Link or MP4 -->
-                    <!-- YouTube Example -->
-					<!-- <iframe 
-							src="https://www.youtube.com/embed/wDchsz8nmbo"
-							title="Demo Video"
-							allowfullscreen>
-						</iframe> -->
+				<div class="premium-video-wrapper">
 
+					<!-- Overlay + Thumbnail -->
+					<div class="thumbnail-overlay" id="thumbOverlay">
+						<img src="images/video/video-thumb.jpg" class="premium-thumb">
+						
+						<!-- Glass Play Button -->
+						<div class="glass-play-btn" id="playBtn">
+							<span></span>
+						</div>
+					</div>
 
-                    <!-- MP4 Example (if using local video) -->
-                     <video class="video-full" controls>
+					<!-- Real Video -->
+					<video id="premiumVideo" class="premium-video" controls>
 						<source src="images/video/sample.mp4" type="video/mp4">
 					</video>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+				</div>
+					</div>
+				</section>
+				<script>
+				const playBtn = document.getElementById("playBtn");
+				const thumbOverlay = document.getElementById("thumbOverlay");
+				const video = document.getElementById("premiumVideo");
+
+				playBtn.addEventListener("click", () => {
+
+					// Smooth Fade Effect
+					thumbOverlay.style.opacity = "0";
+					thumbOverlay.style.transform = "scale(1.05)";
+					
+					setTimeout(() => {
+						thumbOverlay.style.display = "none";
+						video.style.display = "block";
+						video.play();
+					}, 600); // match CSS transition
+				});
+				</script>
+			<!-- =========================== Pre-Wedding Video Section END============================= -->
 
 			<!-- SECTION 4 -->
 			<div id="home-section-1-4" class="section-holder home-section-1-4 parallax" style="background-image:url(images/pages/img-about1.jpg);">
@@ -942,7 +959,7 @@
 								<div class="widget_text widget widget-footer">
 									<h5 class="widgettitle">Contact Us</h5>
 									<ul class="footer-contact">
-										<li><i class="fas fa-map-marker-alt"></i><span>Tandlja, Vadodara, Gujarat</span></li>
+										<li><i class="fas fa-map-marker-alt"></i><span>Tandalja, Vadodara, Gujarat</span></li>
 										<li><i class="fas fa-mobile-alt"></i><span>+91 9537901976</span></li>
 										<li><i class="fas fa-mobile-alt"></i><span>+91 9537901976</span></li>
 										<li><i class="far fa-envelope"></i><span><a href="#" class="__cf_email__" data-cfemail="">[email&#160;protected]</a></span></li>
