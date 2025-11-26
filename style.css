@@ -2842,7 +2842,7 @@ transform: scale(1.6);
 }
 
 .post-image{
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	position:relative;
 	overflow: hidden;
 	display: inline-block;
@@ -2850,7 +2850,7 @@ transform: scale(1.6);
 }
 
 .item-grid-image{
-	margin-bottom: 15px;
+	margin-bottom: 10px;
 }
 
 .post-image:after{
